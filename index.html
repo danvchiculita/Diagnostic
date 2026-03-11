@@ -229,5 +229,31 @@
         </div>
     </footer>
 
+<div id="exit-popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <h2>Ești sigur că strategia actuală de costuri îți protejează cota de piață?</h2>
+            <p>În retail, deciziile luate sub presiune pot genera pierderi de teritoriu greu de recuperat. Descarcă Analiza de Impact: 3 Riscuri structurale în perioade de recesiune.</p>
+            <a href="analiza-impact.pdf" target="_blank" class="cta-btn">DESCARCĂ ANALIZA (PDF)</a>
+        </div>
+    </div>
+
+    <script>
+        // LOGICA EXIT POPUP
+        const popup = document.getElementById('exit-popup');
+        const closeBtn = document.querySelector('.close-popup');
+        let shown = false;
+
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 0 && !shown) {
+                popup.style.display = 'flex';
+                shown = true;
+            }
+        });
+
+        closeBtn.onclick = () => popup.style.display = 'none';
+        window.onclick = (e) => { if(e.target == popup) popup.style.display = 'none'; }
+    </script>
+    
 </body>
 </html>
