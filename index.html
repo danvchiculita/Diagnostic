@@ -104,8 +104,21 @@
             .timeline-flex { grid-template-columns: 1fr; }
             .timeline-steps { text-align: left; border-right: none; border-left: 1px solid var(--accent-gold); padding-left: 20px; padding-right: 0; }
             .form-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+      /* Aceasta este forma corectă, mutată în zona de stil */
+footer { 
+    padding: 40px 5%; 
+    background: #02050a; 
+    color: white; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.shield-svg { 
+    width: 45px; /* Această linie previne imaginea uriașă */
+    fill: var(--accent-gold); 
+}
+ </style>           
 </head>
 <body>
 
