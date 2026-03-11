@@ -28,6 +28,20 @@
         }
         .hero-titles h1.quote { font-family: 'Playfair Display'; font-size: clamp(2.2rem, 5vw, 4rem); font-style: italic; color: var(--accent-gold); margin-bottom: 15px; }
 
+/* EFECTE HOVER UNIVERSALE PENTRU TOATE CASETELE */
+        .card-risc, .pilon-box, .fib-box-asym { 
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: default;
+            border: 1px solid rgba(212,175,55,0.1);
+        }
+        .card-risc:hover, .pilon-box:hover, .fib-box-asym:hover { 
+            transform: translateY(-8px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 15px 30px rgba(212,175,55,0.2);
+            background: rgba(255,255,255,0.05);
+        }
+        .pilon-box:hover { background: white; }
+        
         .zona-tripartita { text-align: center; }
         .bg-white { background: white; padding: 80px 5%; }
         .bg-navy { background: var(--navy-deep); color: white; padding: 80px 5%; }
